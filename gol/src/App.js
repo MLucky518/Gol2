@@ -146,10 +146,10 @@ class App extends React.Component {
 
 			<div className="App">
 				<Switch>
-					<Route path="/" exact><Title /></Route>
+					<Route exact path="/" ><Title /></Route>
 					<div className="main-content">
 
-						<Route path="/game" exact>
+						<Route exact path="/game" >
 							<div className="grid-content">
 								<h2>LifeCycles: {this.state.lifecycles}</h2>
 								<Grid cols={this.cols} rows={this.rows} grid={this.state.grid} selectCell={this.selectCell} />
