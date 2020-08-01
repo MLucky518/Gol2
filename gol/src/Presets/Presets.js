@@ -27,7 +27,7 @@ export default function ImageAvatars(props) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root,"presets"}>
+    <div className={classes.root}>
       <Avatar onClick={() => props.preset(0)} alt="Travis Howard" src="https://upload.wikimedia.org/wikipedia/en/d/d0/Game_of_life_animated_glider_2.gif" className={classes.large} />
       <Avatar onClick={() => props.preset(1)}  alt="Remy Sharp" src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Animated_Hwss.gif" className={classes.large} />
       <Avatar onClick={() => props.preset(2)} alt="Cindy Baker" src="https://www.conwaylife.com/w/images/4/44/X66.gif" className={classes.large} />

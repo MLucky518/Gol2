@@ -12,12 +12,12 @@ function Buttons(props) {
 
             <div>
 
-                <IconButton >
+                <IconButton onClick = {props.faster}>
                 <h3> Speed:</h3>
-                    <AddIcon  onClick = {props.faster} className = "speed" fontSize="large" />
+                    <AddIcon   className = "speed" fontSize="large" />
                 </IconButton>
-                <IconButton   >
-                   <RemoveIcon onClick = {props.slower} className = "speed" fontSize = "large"/>
+                <IconButton  onClick = {props.slower} >
+                   <RemoveIcon  className = "speed" fontSize = "large"/>
                 </IconButton>
                 
               

@@ -1,8 +1,8 @@
 import React from 'react';
 import "./index.scss";
 import Grid from "./components/Grid";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "./components/Home"
+import { BrowserRouter as Switch, Route } from "react-router-dom";
+// import Home from "./components/Home"
 import Title from './components/Title';
 import Buttons from './components/Buttons';
 import ImageAvatars from "./Presets/Presets.js"
@@ -87,12 +87,12 @@ class App extends React.Component {
 	}
 
 	faster = () => {
-		this.speed = 150;
+		this.speed = 50;
 		this.playButton();
 	}
 
 	slower = () => {
-		this.speed = 50;
+		this.speed = 250;
 		this.playButton();
 	}
 
