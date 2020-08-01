@@ -1,0 +1,77 @@
+/* body{
+  background-image: url("https://wallpaperaccess.com/full/156992.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+ 
+ 
+} */
+
+body{
+  background-color: black;
+}
+
+h1,h2{
+  color:rgb(240, 166, 255);
+  font-size:3rem;
+  
+}
+
+.App{
+  text-align: center;
+  
+}
+
+.title{
+  height:100vh;
+  width:100%;
+  background-image: url("https://imgr.cineserie.com/2019/07/space-invaders-une-adaptation-toujours-en-preparation.jpg?imgeng=/f_jpg/cmpr_0/w_1600/h_1200/m_cropbox&ver=1");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.menu-button{
+  position: relative;
+  top:170px;
+  left:20px;
+  
+
+  &:hover{
+   
+      box-shadow:
+            0 0 70px rgb(181, 255, 163),           
+            -10px 0 30px rgb(163, 255, 120),       
+            10px 0 30px rgb(19, 25, 116);         
+      
+  }
+}
+ 
+.menu-options{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height:30vh;
+  margin-top:15%;
+  
+}
+
+.grid-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.main-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color:rgb(54, 3, 54);
+}
+
