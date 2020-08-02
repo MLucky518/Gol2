@@ -1,0 +1,21 @@
+.instructions{
+    height:110vh;
+    width:100%;
+    background-image: url("https://ayay.co.uk/backgrounds/action_games/classic/space-invaders-minimal-cabinet.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+
+.cards{
+    display:flex;
+    justify-content: flex-start;
+    margin:5%;
+}
+
+.card-div{
+   width:27%;
+   margin: 3%;
+  
+}

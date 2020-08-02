@@ -7,8 +7,9 @@ function Title() {
         <div className = "title">
             <div className = "menu-options">
             <Link to ="/game"><StyleBtn className = "menu-button" style = {{color:"red"}} >Play Space Populators</StyleBtn></Link>
-            <Link to = "/home"> <StyleBtn className = "menu-button" style = {{color:"blue"}} >Instructions</StyleBtn></Link>
-            <StyleBtn className = "menu-button" style = {{color:"yellow"}} >More Info</StyleBtn>
+            <Link to ="/game2"><StyleBtn className = "menu-button" style = {{color:"purple"}} >Play VS</StyleBtn></Link>
+            <Link to = "/instructions"> <StyleBtn className = "menu-button" style = {{color:"blue"}} >Instructions</StyleBtn></Link>
+           
             </div>
             
         </div>

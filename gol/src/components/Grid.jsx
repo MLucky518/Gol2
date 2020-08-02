@@ -7,6 +7,7 @@ function Cell(props) {
 
 
     const selectCell = (e) => {
+        
         props.selectCell(props.row, props.col)
 
     }
@@ -44,6 +45,7 @@ function Grid({ rows, cols, grid, selectCell }) {
                     row={i}
                     col={j}
                     selectCell={selectCell}
+                   
                 />
 
             )
