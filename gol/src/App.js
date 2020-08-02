@@ -6,14 +6,15 @@ import { BrowserRouter as Switch, Route } from "react-router-dom";
 import Title from './components/Title';
 import Buttons from './components/Buttons';
 import ImageAvatars from "./Presets/Presets.js"
-import { gliderArray, spaceships, oscillators, gliderGun } from "./Presets/presets_templates"
+import { gliderArray, spaceships, oscillators, gliderGun,smile } from "./Presets/presets_templates"
 import Instructions from './components/Instructions';
 
 const presets = [
 	gliderArray,
 	spaceships,
 	oscillators,
-	gliderGun
+	gliderGun,
+	smile
 ]
 
 
@@ -183,6 +184,7 @@ class App extends React.Component {
 	};
 
 	checkWinner = () => {
+		clearInterval(this.intervalId2);
 		for (let i = 0; i < this.rows2; i++) {
 			for (let j = 0; j < this.cols2; j++) {
 				if (this.state.grid[i][j] === 1) {
@@ -247,7 +249,7 @@ class App extends React.Component {
 
 	componentDidMount() {
 
-		this.seed();
+		
 		this.seed2();
 	}
 

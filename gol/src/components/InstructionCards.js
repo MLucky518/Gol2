@@ -85,7 +85,7 @@ export default function MediaCard() {
                         <br />
                         <Typography variant="body1" color="textPrimary" component="p" style={{ textAlign: "center" }}>
                     Play against the computer's randomly generated grid and see who has more alive Cells.
-                    the computers maximum lifecycles is 100 so try to beat them at any point before then. 
+                    the computers maximum lifecycles is 100 so try to beat them at any point before then.For now results of calculation will be viewable from the console
                         </Typography>
                     </CardContent>
                 </CardActionArea>

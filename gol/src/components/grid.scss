@@ -15,6 +15,7 @@
    display: flex; 
   flex-wrap: wrap;
   border-radius: 50%;
+  margin-left: 5%;
  
   
 
@@ -104,7 +105,8 @@ h3{
 
 .presets{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 5%;
   
  
 }
