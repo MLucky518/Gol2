@@ -134,7 +134,7 @@ class App extends React.Component {
 
 
 	faster = () => {
-		this.speed = 5;
+		this.speed = -100;
 		this.playButton();
 	}
 
