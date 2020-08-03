@@ -6,7 +6,7 @@ import { BrowserRouter as Switch, Route } from "react-router-dom";
 import Title from './components/Title';
 import Buttons from './components/Buttons';
 import ImageAvatars from "./Presets/Presets.js"
-import { gliderArray, spaceships, oscillators, gliderGun,smile } from "./Presets/presets_templates"
+import { gliderArray, spaceships, oscillators, gliderGun, smile } from "./Presets/presets_templates"
 import Instructions from './components/Instructions';
 
 const presets = [
@@ -134,7 +134,7 @@ class App extends React.Component {
 
 
 	faster = () => {
-		this.speed = 10;
+		this.speed = 5;
 		this.playButton();
 	}
 
@@ -160,16 +160,44 @@ class App extends React.Component {
 		for (let i = 0; i < this.rows; i++) {
 			for (let j = 0; j < this.cols; j++) {
 				let count = 0;
-				if (i > 0) if (g[i - 1][j] === 1) count++;
-				if (i > 0 && j > 0) if (g[i - 1][j - 1] === 1) count++;
-				if (i > 0 && j < this.cols - 1) if (g[i - 1][j + 1] === 1) count++;
-				if (j < this.cols - 1) if (g[i][j + 1] === 1) count++;
-				if (j > 0) if (g[i][j - 1]) count++;
-				if (i < this.rows - 1) if (g[i + 1][j] === 1) count++;
-				if (i < this.rows - 1 && j > 0) if (g[i + 1][j - 1] === 1) count++;
-				if (i < this.rows - 1 && this.cols - 1) if (g[i + 1][j + 1] === 1) count++;
-				if (g[i][j] && (count < 2 || count > 3)) g2[i][j] = 0;
-				if (!g[i][j] && count === 3) g2[i][j] = 1;
+				if (i > 0 && g[i - 1][j] === 1) {
+					count++;
+				}
+				if (i > 0 && j > 0) {
+					if (g[i - 1][j - 1] === 1) {
+						count++;
+					}
+				}
+				if (i > 0 && j < this.cols - 1) {
+					if (g[i - 1][j + 1] === 1) {
+						count++;
+					}
+				}
+				if (j < this.cols - 1 && g[i][j + 1] === 1) {
+					count++;
+				}
+				if (j > 0 && g[i][j - 1]) {
+					count++;
+				}
+				if (i < this.rows - 1 && g[i + 1][j] === 1) {
+					count++;
+				}
+				if (i < this.rows - 1 && j > 0) {
+					if (g[i + 1][j - 1] === 1) {
+						count++;
+					}
+				}
+				if (i < this.rows - 1 && this.cols - 1) {
+					if (g[i + 1][j + 1] === 1) {
+						count++;
+					}
+				}
+				if (g[i][j] && (count < 2 || count > 3)) {
+					g2[i][j] = 0;
+				}
+				if (!g[i][j] && count === 3) {
+					g2[i][j] = 1;
+				}
 
 			}
 		}
@@ -214,16 +242,44 @@ class App extends React.Component {
 			for (let i = 0; i < this.rows; i++) {
 				for (let j = 0; j < this.cols; j++) {
 					let count = 0;
-					if (i > 0) if (g[i - 1][j] === 1) count++;
-					if (i > 0 && j > 0) if (g[i - 1][j - 1] === 1) count++;
-					if (i > 0 && j < this.cols - 1) if (g[i - 1][j + 1] === 1) count++;
-					if (j < this.cols - 1) if (g[i][j + 1] === 1) count++;
-					if (j > 0) if (g[i][j - 1]) count++;
-					if (i < this.rows - 1) if (g[i + 1][j] === 1) count++;
-					if (i < this.rows - 1 && j > 0) if (g[i + 1][j - 1] === 1) count++;
-					if (i < this.rows - 1 && this.cols - 1) if (g[i + 1][j + 1] === 1) count++;
-					if (g[i][j] && (count < 2 || count > 3)) g2[i][j] = 0;
-					if (!g[i][j] && count === 3) g2[i][j] = 1;
+					if (i > 0 && g[i - 1][j] === 1) {
+						count++;
+					}
+					if (i > 0 && j > 0) {
+						if (g[i - 1][j - 1] === 1) {
+							count++;
+						}
+					}
+					if (i > 0 && j < this.cols - 1) {
+						if (g[i - 1][j + 1] === 1) {
+							count++;
+						}
+					}
+					if (j < this.cols - 1 && g[i][j + 1] === 1) {
+						count++;
+					}
+					if (j > 0 && g[i][j - 1]) {
+						count++;
+					}
+					if (i < this.rows - 1 && g[i + 1][j] === 1) {
+						count++;
+					}
+					if (i < this.rows - 1 && j > 0) {
+						if (g[i + 1][j - 1] === 1) {
+							count++;
+						}
+					}
+					if (i < this.rows - 1 && this.cols - 1) {
+						if (g[i + 1][j + 1] === 1) {
+							count++;
+						}
+					}
+					if (g[i][j] && (count < 2 || count > 3)) {
+						g2[i][j] = 0;
+					}
+					if (!g[i][j] && count === 3) {
+						g2[i][j] = 1;
+					}
 
 				}
 
@@ -249,7 +305,7 @@ class App extends React.Component {
 
 	componentDidMount() {
 
-		
+
 		this.seed2();
 	}
 
